@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Navigation</title>
+    <style>
+        section {
+            height: 100vh;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        #about {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <section id="home">
+        <h1>Home Section</h1>
+        <p>Say "go to the about" to navigate to the About section.</p>
+        <button onclick="startListening()">Start Listening</button>
+    </section>
+    <section id="about">
+        <h1>About Section</h1>
+        <p>Welcome to the About section!</p>
+    </section>
+    <script>
+        // Check if SpeechRecognition is available in the browser
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+
+            recognition.continuous = false; // Process only one command at a time
+            recognition.lang = 'en-US'; // Set language to English
+
+            // Start listening when the user clicks the button
+            function startListening() {
+                recognition.start();
+                console.log('Speech recognition started, please say a command.');
+            }
+
+            // Event listener for speech recognition results
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                console.log('You said:', transcript);
+
+                if (transcript.includes('go to the about')) {
+                    const aboutSection = document.querySelector('#about');
+                    if (aboutSection) {
+                        aboutSection.scrollIntoView({ behavior: 'smooth' });
+                        console.log('Navigated to About section.');
+                    }
+                } else {
+                    console.log('Command not recognized.');
+                }
+            };
+
+            // Error handling
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                if (event.error === 'not-allowed') {
+                    alert("Microphone access denied. Please enable it.");
+                }
+            };
+
+            recognition.onstart = () => {
+                console.log("Microphone access granted, listening...");
+            };
+
+            recognition.onend = () => {
+                console.log("Speech recognition service has stopped.");
+            };
+
+        } else {
+            console.error('Speech Recognition API is not supported in this browser.');
+            alert('Sorry, your browser does not support speech recognition.');
+        }
+    </script>
+</body>
+</html>
