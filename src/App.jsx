@@ -40,7 +40,7 @@ const App = () => {
       {/* Second Section */}
       <div className="w-full h-screen flex justify-center items-center text-amber-300 bg-slate-900">
         <h1 className="text-[50px]">Learn more</h1>
-      </div>
+      </div> 
     </>
   );
 };
