@@ -5,7 +5,7 @@ Routes - React Router DOM (https://reactrouter.com/en/main)
 Animation - React Awesome Reveal & Framer Motion (https://react-awesome-reveal.morello.dev/ & https://motion.dev/)
 State management - Redux Toolkit (https://redux-toolkit.js.org/)
 Validation - Formik & Yup (https://formik.org/docs/guides/validation & )
-Carousel - React Slick (https://react-slick.neostack.com/) & Splide (https://splidejs.com/)
+Carousel - React Splide (https://splidejs.com/) & React Slick (https://react-slick.neostack.com/)
 CSS Framework - Tailwind (https://tailwindcss.com/) & Emotion (https://emotion.sh/docs/introduction)
 UI Components - MUI & Styled Components (https://mui.com/material-ui/all-components/ & https://styled-components.com/)
 Icons - MUI Icons & React Icons (https://mui.com/material-ui/material-icons/ & https://react-icons.github.io/react-icons/)
@@ -17,6 +17,7 @@ Pills - Pilling.js (https://piling.js.org/docs/)
 InfiniteScroll - React Infinite Scroll (https://www.npmjs.com/package/react-infinite-scroll-component)
 MasonryLayout - React Responsive Masonry (https://www.npmjs.com/package/react-responsive-masonry)
 Scroll - GSAP (https://gsap.com/resources/React/) & Lenis (https://lenis.darkroom.engineering/)
+Loaders - React Loader Spinners (https://mhnpd.github.io/react-loader-spinner/)
 
 React Pro
 
