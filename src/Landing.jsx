@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 const Landing = () => {
-    const textRef = useRef(null);
+  const textRef = useRef(null);
   // const imageSectionRef = useRef(null);
   // const contentRef = useRef(null);
 

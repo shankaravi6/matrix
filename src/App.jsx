@@ -6,14 +6,14 @@ import Landing from "./Landing";
 
 
 const App = () => {
-  
+
 
   return (
     <>
       <BrowserRouter>
         <Routes>
-        <Route exact path="/" element={<Landing/>} />
-          <Route exact path="/scroll" element={<Scroll/>} />
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/scroll" element={<Scroll />} />
         </Routes>
       </BrowserRouter>
     </>
