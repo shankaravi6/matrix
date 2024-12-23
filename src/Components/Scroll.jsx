@@ -66,7 +66,7 @@ const Scroll = () => {
         </div>
 
         {/* Right Side: Scrollable Content */}
-        <div className="w-2/3">
+        <div className="w-2/3 p-10">
           {/* Section 1 */}
           <div
             className="h-screen flex flex-col justify-center section"

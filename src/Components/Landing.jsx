@@ -45,7 +45,7 @@ const Landing = () => {
   return (
     <div>
       {/* First Section */}
-      <div className="w-full h-screen flex justify-center items-center text-amber-300 bg-slate-900">
+      <div className="w-full h-screen flex justify-center items-center text-slate-300 bg-slate-900">
         <h1 className="text-[50px]" ref={textRef}>
           Design your destiny
         </h1>
@@ -82,7 +82,7 @@ const Landing = () => {
       </div>  */}
 
       {/* Third Section */}
-      <div className="w-full h-screen flex justify-center items-center text-amber-300 bg-slate-900">
+      <div className="w-full h-screen flex justify-center items-center text-slate-300 bg-slate-900">
         <h1 className="text-[50px]">
           About
         </h1>
